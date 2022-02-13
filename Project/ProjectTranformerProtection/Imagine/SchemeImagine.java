@@ -1,4 +1,4 @@
-package ProjectTranformerProtection;
+package Program.Imagine;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -17,7 +17,7 @@ public class SchemeImagine extends JFrame implements Runnable{
         scheme_window.setSize(800, 600);
         scheme_window.setResizable(true);
         scheme_window.setTitle("Simplified electrical power grid scheme ");
-        scheme_window.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        scheme_window.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         scheme_window.setLocation(0, 0);
         scheme_window.setVisible(true);
         SchemePaint schemePaint = new SchemePaint();
@@ -29,9 +29,9 @@ public class SchemeImagine extends JFrame implements Runnable{
 
     }
         public static void closeScheme(){
-            //scheme_window.removeAll();
-           // scheme_window.setVisible(false);
-            scheme_window.disable();
+            scheme_window.removeAll();
+           scheme_window.setVisible(false);
+
         }
 
     @Override
