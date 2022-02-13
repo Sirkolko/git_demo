@@ -7,13 +7,15 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class lineReader {
-    public static String[] lineReader() throws IOException {
+    public static double lineReader() throws IOException {
         System.out.println("\nEnter power grid class (35,110,150,220,330,500)");
         Scanner sc = new Scanner(System.in);
         BufferedReader br ;
         int chooseGridClass = sc.nextInt();
         int count = 0;
+        double resistant = 0;
         String[][] arrOfGrids = new String[0][0];
+        String[][] arrOfGrids1 = new String[0][0];
 
         //read information about power grids and write info into array and print info to select power grid section
         if(chooseGridClass == 35 || chooseGridClass == 110 ||chooseGridClass == 150) {
@@ -25,22 +27,14 @@ public class lineReader {
             }
 
             sc  = new Scanner(new FileReader("src/Program/PowerGridInfo/Grids35-150kV.txt"));
-
-            if(chooseGridClass == 35) {
-                arrOfGrids = new String[count][2];
-                for (int i = 0; i < count; i++) {
-                    for (int j = 0; j < 2; j++) {
-                        arrOfGrids[i][j] = sc.next();
-                    }
-                }
-            }else if (chooseGridClass == 110){
-                arrOfGrids = new String[count][2];
-                for (int i = 0; i < count; i++) {
-                    for (int j = 0; j < 2; j++) {
-                        arrOfGrids[i][j] = sc.next();
-                    }
+            arrOfGrids = new String[count][4];
+            for (int i = 0 ; i < count ; i++){
+                for (int j = 0 ; j < 4 ; j++) {
+                    arrOfGrids[i][j] = sc.next();
                 }
             }
+
+            arrOfGrids1 = new String[count][arrOfGrids.length];
 
         }else if (chooseGridClass == 220 || chooseGridClass == 330 ||chooseGridClass == 500){
 
@@ -57,9 +51,34 @@ public class lineReader {
                     arrOfGrids[i][j] = sc.next();
                 }
             }
+            arrOfGrids1 = new String[count][arrOfGrids.length];
         }else{
             System.out.println("Cant find power grid this class");
             System.exit(3);
+        }
+
+        switch (chooseGridClass){
+            case 35,220:
+                for (int i = 0 ; i < count ; i++){
+                    for (int j  = 0 , l = 0 ; j < 2 ; j++ , l++) {
+                        arrOfGrids1[i][l] = arrOfGrids[i][j];
+                    }
+                }
+                break;
+            case 110,330:
+                for (int i = 0 ; i < count ; i++){
+                    for (int j  = 0 , l = 0 ; j < 2 ; j+= 2 , l++) {
+                        arrOfGrids1[i][l] = arrOfGrids[i][j];
+                    }
+                }
+                break;
+            case 150,500:
+                for (int i = 0 ; i < count ; i++){
+                    for (int j  = 0 , l = 0 ; j < 2 ; j+= 3 , l++) {
+                        arrOfGrids1[i][l] = arrOfGrids[i][j];
+                    }
+                }
+                break;
         }
 
         String[] section = new String[count];
@@ -68,14 +87,18 @@ public class lineReader {
         }
 
         //choose power grids
-        System.out.println("\nEnter power grid section " + Arrays.toString(section));
 
-
-
-
-       String [] arr = new String[0];
-        System.out.println(Arrays.toString(arr));
-     return arr;
+           System.out.println("\nEnter power grid section " + Arrays.toString(section));
+           Scanner sc1 = new Scanner(System.in);
+           String sectionOfGrid = sc1.nextLine();
+           for (int i = 0; i < count; i++) {
+               if (arrOfGrids1[i][0].contains(sectionOfGrid)) {
+                   resistant = Double.parseDouble(arrOfGrids1[i][1]);
+                   break;
+           }
+       }
+        System.out.println("\nResistant of selected power grid is " + resistant + " Ohm ");
+     return resistant;
     }
 }
 

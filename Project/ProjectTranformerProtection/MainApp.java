@@ -23,7 +23,7 @@ public class MainApp {
         s.start();
 
         String[][] transformerInfo = transformerReader.transformerReader();
-        String[] lineInfo = lineReader.lineReader();
+        double gridInfo = lineReader.lineReader();
 
 
 
