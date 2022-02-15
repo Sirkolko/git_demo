@@ -1,6 +1,6 @@
 package Program.Mathes;
 
-public class math {
+public class Math {
     public void result(){
 
     }
