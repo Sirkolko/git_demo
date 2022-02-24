@@ -49,6 +49,6 @@ public class MainApp {
         double c = mathCalculation.shortCircleCurrentK2MaxCalc(syst);
         double d = mathCalculation.shortCircleCurrentK2MinCalc(syst);
 
-        System.out.printf("%.2f , %.2f , %.2f , %.2f", a, b, c, d);
+        System.out.printf("%.2f A , %.2f A , %.2f A, %.2f A", a, b, c, d);
     }
 }

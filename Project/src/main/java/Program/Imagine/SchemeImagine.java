@@ -12,7 +12,7 @@ public class SchemeImagine extends JFrame implements Runnable{
 
 
     public static void showScheme()throws IOException {
-        BackGround = ImageIO.read(SchemeImagine.class.getResourceAsStream("ProtectionTransformerScheme.JPG"));
+        BackGround = ImageIO.read(SchemeImagine.class.getResourceAsStream("/ProtectionTransformerScheme.jpg"));
         scheme_window = new SchemeImagine();
         scheme_window.setSize(800, 600);
         scheme_window.setResizable(true);
