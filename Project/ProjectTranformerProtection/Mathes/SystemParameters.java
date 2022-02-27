@@ -66,4 +66,67 @@ public class SystemParameters {
         }
         public SystemParameters build(){return newSystemParameters;}
     }
+    public double getPowerGridLength() {
+        return powerGridLength;
+    }
+
+    public void setPowerGridLength(double powerGridLength) {
+        this.powerGridLength = powerGridLength;
+    }
+
+    public double getPowerGridResist() {
+        return powerGridResist;
+    }
+
+    public void setPowerGridResist(double powerGridResist) {
+        this.powerGridResist = powerGridResist;
+    }
+
+    public double getSystemVoltage() {
+        return systemVoltage;
+    }
+
+    public void setSystemVoltage(double systemVoltage) {
+        this.systemVoltage = systemVoltage;
+    }
+
+    public int getTransformerPower() {
+        return transformerPower;
+    }
+
+    public void setTransformerPower(int transformerPower) {
+        this.transformerPower = transformerPower;
+    }
+
+    public double getTransformerVoltageH() {
+        return transformerVoltageH;
+    }
+
+    public void setTransformerVoltageH(double transformerVoltageH) {
+        this.transformerVoltageH = transformerVoltageH;
+    }
+
+    public double getTransformerVoltageL() {
+        return transformerVoltageL;
+    }
+
+    public void setTransformerVoltageL(double transformerVoltageL) {
+        this.transformerVoltageL = transformerVoltageL;
+    }
+
+    public double getShortCircCurrentLow() {
+        return shortCircCurrentLow;
+    }
+
+    public void setShortCircCurrentLow(double shortCircCurrentLow) {
+        this.shortCircCurrentLow = shortCircCurrentLow;
+    }
+
+    public double getShortCircCurrentHight() {
+        return shortCircCurrentHight;
+    }
+
+    public void setShortCircCurrentHight(double shortCircCurrentHight) {
+        this.shortCircCurrentHight = shortCircCurrentHight;
+    }
 }

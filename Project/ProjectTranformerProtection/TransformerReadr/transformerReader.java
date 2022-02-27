@@ -16,13 +16,13 @@ public class TransformerReader {
             transformerClass = sc.nextInt();
             switch (transformerClass) {
                 case 35:
-                    sc = new Scanner(new File("D:\\GITSOFTSERVE\\softserve project\\ElectroCircle\\shortCurcuit\\src\\Program\\TransformerInfo\\Transformer35kV.txt"));
+                    sc = new Scanner(new File("src/main/java/Program/TransformerInfo/Transformer35kV.txt"));
                     break;
                 case 110:
-                    sc = new Scanner(new File("D:\\GITSOFTSERVE\\softserve project\\ElectroCircle\\shortCurcuit\\src\\Program\\TransformerInfo\\Transformer110kV.txt"));
+                    sc = new Scanner(new File("src/main/java/Program/TransformerInfo/Transformer110kV.txt"));
                     break;
                 case 220:
-                    sc = new Scanner(new File("D:\\GITSOFTSERVE\\softserve project\\ElectroCircle\\shortCurcuit\\src\\Program\\TransformerInfo\\Transformer220kV.txt"));
+                    sc = new Scanner(new File("src/main/java/Program/TransformerInfo/Transformer220kV.txt"));
                     break;
                 default:
                     System.out.println("Cant find transformer this class");
