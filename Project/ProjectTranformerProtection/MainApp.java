@@ -1,5 +1,11 @@
 package Program;
 
+/**
+ * Main class ;
+ * @version 1.0 26 Feb 2022
+ * @author Sergiy Okhota
+ */
+
 import Program.Imagine.SchemeImagine;
 import Program.Mathes.MathCalculation;
 import Program.Mathes.SystemParameters;

@@ -1,10 +1,21 @@
 package Program.PowerGridReader;
 
-import java.io.BufferedReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Class need to read information chosen a user to future calculating ;
+ * @version 1.0 26 Feb 2022
+ * @author Shcherbei Anton
+ */
+
 public class LineReader {
+
+    /**
+     * This sub-main method which use other method in this package
+     * @return resistant chosen a user power grid.
+     */
+
     public double lineReader() {
         System.out.println("\nEnter power grid class (35,110,150,220,330,500)");
         Scanner sc = new Scanner(System.in);
@@ -53,7 +64,6 @@ public class LineReader {
                     section[i] = arrOfGrids[j][0];
                 }
             }
-
 
             System.out.println("\nEnter power grid section " + Arrays.toString(section));
             Scanner sc1 = new Scanner(System.in);
