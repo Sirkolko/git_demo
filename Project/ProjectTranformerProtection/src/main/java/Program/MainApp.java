@@ -31,6 +31,7 @@ public class MainApp {
         Thread s = new Thread(new SchemeImagine());
         s.start();
 
+
         TransformerReader t1 = new TransformerReader();
         String[][] transformerInfo = t1.transformerReader();
         LineReader l1 = new LineReader();

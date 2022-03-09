@@ -39,7 +39,7 @@ public class TransformerReader {
                     sc = new Scanner(new File("src/main/java/Program/TransformerInfo/Transformer35kV.txt"));
                     break;
                 case 110:
-                    sc = new Scanner(new File("src/main//Program/TransformerInfo/Transformer110kV.txt"));
+                    sc = new Scanner(new File("src/main/java/Program/TransformerInfo/Transformer110kV.txt"));
                     break;
                 case 220:
                     sc = new Scanner(new File("src/main/java/Program/TransformerInfo/Transformer220kV.txt"));
